@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Information</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        nav .container-fluid #navbarSupportedContent #navlinks {
+            font-size: x-large;
+            margin-right: 10px;
+               
+        }
+
+        nav .container-fluid #navbarSupportedContent .dropdown-menu .dropdown-item {
+            font-size: x-large;
+            margin-right: 10px;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 1rem;
+            text-align: center;
+        }
+
+
+        body {
+            font-family: "Arial", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1e1e2f;
+        }
+
+        /* توجيه خاص للموبايل لجعل الأزرار بجانب بعض */
+        @media (max-width: 768px) {
+            .d-flex.flex-column.flex-md-row {
+                flex-direction: row !important;
+                justify-content: center;
+            }
+
+            .d-flex.flex-column.flex-md-row a {
+                flex: 1;
+                margin: 5px;
+                text-align: center;
+            }
+        }
+
+
+        @media (max-width: 768px) {
+            .book-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .book-info {
+                padding-left: 0;
+                text-align: center;
+            }
+
+            .book-image {
+                width: 100%;
+                /* Make the image take up the full width */
+                margin-bottom: 20px;
+            }
+        }
+
+        .book-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: flex-start;
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        .book-image {
+            width: 250px;
+            height: 350px;
+        }
+
+        .book-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+
+        .book-info {
+            flex: 2;
+            padding-left: 20px;
+            color: #333;
+            min-width: 250px;
+        }
+
+
+        .book-title {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            word-wrap: break-word;
+        }
+
+        .author {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .details {
+            margin-top: 20px;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .rating {
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .rating i {
+            margin-right: 8px;
+            color: #007bff;
+        }
+
+        .description {
+            margin-top: 20px;
+            font-size: 1rem;
+            color: #777;
+            line-height: 1.6;
+        }
+
+        /* Button style */
+        .preview-button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1rem;
+            margin-top: 20px;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .preview-button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Additional CSS for book information section */
+        .book-full-info {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .book-full-info h2 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .book-full-info p,
+        .book-info,
+        .quotes-section .quote-text,
+        .summary-section p {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+
+        /* Icon styling */
+        .details i,
+        .book-full-info i {
+            margin-right: 8px;
+            color: #007bff;
+        }
+
+        /* Styling for the quotes section */
+        .quotes-section {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .quotes-section h2 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 15px;
+
+        }
+
+        .quote {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .quote i {
+            margin-right: 10px;
+            color: #007bff;
+        }
+
+        .quote-text {
+            color: #444;
+        }
+
+        /* Styling for the summary section */
+        .summary-section {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .summary-section h2 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .summary-section p {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+ <nav class="navbar navbar-expand-xxl bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../index.html"><img src="../icon/icon.ico" alt="" width="60px" height="60px" style="margin-right: 200px;"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" id="navlinks" aria-current="page" href="../index.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link active dropdown-toggle" id="navlinks" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Categories
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="../Mohamed Nabil/Islamicbooks.html">Islamic books</a></li>
+              <li><a class="dropdown-item" href="softwarebooks.html">Software books</a></li>
+              <li><a class="dropdown-item" href="../Omar Ibrahim/NetworkSecuritybooks.html">Network Security books</a></li>
+              <li><a class="dropdown-item" href="../Ahmed Abdel Aziz/Historybooks.html">History books</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../ahmed gmal/plans.html" id="navlinks">Membership</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../Fatima/aboutus.html" id="navlinks">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../ziad mohamed/contact.html" id="navlinks">Contact us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../hassan/login.html" id="navlinks">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../Mohammed Mahdi/register.html"
+              id="navlinks">Register</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search" style="margin-bottom: 10px;">
+          <input class="form-control me-2 border-dark" type="search" placeholder="Search" aria-label="Search" />
+          <button class="btn btn-outline-light border-dark bg-success" type="submit">
+            Search
+          </button>
+        </form>
+      </div>
+    </div>
+  </nav>
+    <div class="book-container" style="overflow: hidden;">
+        <!-- صورة الكتاب -->
+        <div class="book-image" style="float: left; text-align: center; margin-right: 20px;">
+            <img src="2.jpg" alt="Book Cover" height="250px" width="200px" />
+            <!-- Preview and Download buttons -->
+            <a href="https://gameprogrammingpatterns.com/contents.html" class="preview-button"><i
+                    class="fas fa-eye"></i> Preview</a>
+            <a href="#" class="preview-button" style="background-color: #28a745; margin-top: 10px">
+                <i class="fas fa-download"></i> Download</a>
+        </div>
+
+
+        <div class="book-info">
+            <h1 class="book-title"><strong>Game Programming Patterns
+                </strong></h1>
+            <p class="author">
+                <i class="fas fa-user"></i> Author: Robert Nystrom
+            </p>
+            <div class="details">
+                <p><i class="fas fa-ruler-combined"></i> Size: 3MB</p>
+                <p><i class="fas fa-book"></i> Pages: 705</p>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <span>Rating: ★★★</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="book-full-info">
+        <h2><strong>About the Book</strong></h2>
+        <hr />
+        <p>
+            Robert Nystrom is a programmer, author, and language development expert⁽¹⁾. He currently works at Google on
+            the Dart language⁽¹⁾. He has written a best-selling book called "Game Programming Patterns", which presents
+            a set of patterns he found in game development to make code cleaner, easier to understand, and faster⁽²⁾.
+
+            Before joining Google, he worked at Electronic Arts for eight years, where he contributed to game
+            development⁽¹⁾. He also wrote another book called "Crafting Interpreters", which teaches how to create a
+            complete and efficient programming language⁽¹⁾.
+
+        </p>
+        <h2><strong>Details</strong></h2>
+        <p><i class="fas fa-language"></i> <strong>Language:</strong> English</p>
+        <p><i class="fas fa-feather-alt"></i> <strong>Genre:</strong> Programming</p>
+        <p><i class="fas fa-calendar-alt"></i> <strong>Publication Date:</strong> April 30, 2015</p>
+        <p><i class="fas fa-barcode"></i> <strong>ISBN:</strong> 978-00043273565</p>
+    </div>
+
+    <div class="quotes-section">
+        <h2><strong>Quotes</strong></h2>
+        <hr />
+        <div class="quote">
+            <i class="fas fa-quote-left"></i>
+            <span class="quote-text">" The book is suitable for programmers working on video games and beginners who
+                want to learn good programming patterns to improve their performance.
+
+                "</span>
+        </div>
+    </div>
+
+    <div class="summary-section">
+        <h2><strong>Summary</strong></h2>
+        <hr />
+        <p>The book provides a comprehensive guide to common game programming patterns, covering essential concepts such
+            as core loops, organizing objects with components, and optimizing CPU memory usage for better performance.
+            It includes practical examples and exercises to help readers apply what they learn effectively. With its
+            visually appealing design and clear illustrations, the book makes understanding patterns easier and more
+            engaging. Additionally, it is available in multiple formats, including print and digital editions, to suit
+            different preferences.</p>
+
+
+    </div>
+<footer class="bg-dark text-white text-center text-lg-start">
+    <div class="container p-4">
+      <div class="row">
+        <!-- عمود اللوجو والنص -->
+        <div class="col-lg-6 col-md-12 mb-4 mb-md-0 text-start">
+          <h5 class="text-uppercase">
+            <img src="../icon/icon.ico" alt="Library Logo" width="90" class="me-2">
+            BATU Library
+          </h5>
+          <p>
+          <blockquote>
+            "Libraries store the energy that fuels the imagination. They open up windows to the world and inspire us to
+            explore, achieve, and contribute to improving our quality of life."
+            <br>— Sidney Sheldon
+          </blockquote>
+          </p>
+        </div>
+  
+        <!-- عمود الروابط -->
+        <div class="col-lg-6 col-md-12">
+          <div class="row">
+            <!-- العمود الأول -->
+            <div class="col-lg-4 col-md-6 mb-4">
+              <h5 class="text-uppercase">Links</h5>
+              <ul class="list-unstyled">
+                <li class="mb-2">
+                  <a href="../index.html" class="text-white text-decoration-none">Home</a>
+                </li>
+                <li class="mb-2">
+                  <a href="../Mohamed Mahdi/register.html" class="text-white text-decoration-none">register</a>
+                </li>
+                <li class="mb-2">
+                  <a href="../hassan/login.html" class="text-white text-decoration-none">Login</a>
+                </li>
+                <li class="mb-2">
+                  <a href="../Fatima/aboutus.html" class="text-white text-decoration-none">About us</a>
+                </li>
+                <li class="mb-2">
+                  <a href="../ziad mohamed/contact.html" class="text-white text-decoration-none">Contact us</a>
+                </li>
+              </ul>
+            </div>
+  
+            <!-- العمود الثاني -->
+            <div class="col-lg-4 col-md-6 mb-4">
+              <h5 class="text-uppercase">More Links</h5>
+              <ul class="list-unstyled">
+                <li class="mb-2">
+                  <a href="../Doha/forgotpassword.html" class="text-white text-decoration-none">Forgot password</a>
+                </li>
+                <li class="mb-2">
+                  <a href="../Ahmed Abdel Rahim/faq.html" class="text-white text-decoration-none">FAQ</a>
+                </li>
+                <li class="mb-2">
+                  <a href="../Mahmoud Ahmed Mahmoud/privacypolicy.html" class="text-white text-decoration-none">privacy
+                    policy</a>
+                </li>
+              </ul>
+            </div>
+  
+  
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  
+    <div class="  text-center p-3 ">
+      © 2024 Copyright:
+      <a class="text-white text-decoration-none" href="../index.html"> BATU Library.com</a>
+    </div>
+  </footer>
+</body>

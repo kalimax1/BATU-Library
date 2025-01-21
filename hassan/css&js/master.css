@@ -1,0 +1,70 @@
+/*width="60px" height="60px" style="margin-right: 200px;" this is for image 
+style="margin-bottom: 10px;"
+*/
+.d-flex
+{
+    margin-bottom: 10px;
+
+}
+nav .container-fluid  #navbarSupportedContent #navlinks   {
+    font-size: x-large; 
+    margin-right: 10px;
+ 
+  }
+ nav .container-fluid  #navbarSupportedContent .dropdown-menu .dropdown-item   {
+    font-size: x-large; 
+    margin-right: 10px;
+
+  }
+
+#image
+{
+    width: 60px;
+    height: 60px;
+    margin-right: 200px;
+
+}
+body {
+    background: url('BackGround.jpg') no-repeat center center fixed; 
+    background-size: cover;
+   
+ 
+    height: 100vh;
+    margin: 5;
+}
+.mine{
+    display: flex;
+    margin-bottom: 250px;
+    justify-content: center;
+    margin-top: 100px;
+   
+}
+.login-container1 {
+    width: 100%;
+    max-width: 400px;
+    background: rgba(200, 175, 100, 0.9);
+    padding: 20px;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(179, 200, 100, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+.login-header {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #403f34;
+}
+.forgot-password,
+.register-link {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #4e3636;
+    text-decoration: none;
+}
+.forgot-password:hover,
+.register-link:hover {
+    text-decoration: underline;
+}

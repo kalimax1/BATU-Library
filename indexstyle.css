@@ -1,0 +1,118 @@
+/* General body styling */
+body {
+  background-color: #b8e4ff;
+}
+
+/* Header section with background image and styling */
+.header {
+  text-align: center;
+  padding: 250px 0px;
+  color: white;
+  text-shadow: 2px 2px 5px #000;
+  background: url("index.jpg") no-repeat center center/cover;
+}
+/* Styling for the search bar container */
+#search-container {
+  padding: 10px;
+  text-align: center;
+  margin-top: 10px;
+}
+/* Input field styling */
+input[type="text"] {
+  padding: 8px;
+  width: 40%;
+  border-radius: 20px;
+  border: 1px solid #120eec;
+  height: 55px;
+}
+/* Button styling for the search bar */
+button[type="submit"] {
+  background-color: #43cd19;
+  color: white;
+  padding: 4px 15px;
+  border-radius: 20px;
+  height: 55px;
+  width: 75px;
+}
+
+/* Card container for displaying books */
+.cardcontainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 0 126px;
+}
+
+/* Individual card styling */
+.cards {
+  border: 1px solid #000000;
+  padding: 15px;
+  text-align: center;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  font-size: 1.3em;
+  width: 300px;
+  height: fit-content;
+}
+
+/* Book image styling */
+.cards img {
+  width: 200px;
+  height: 220px;
+  border-radius: 15px;
+}
+
+.cards h3 {
+  margin: 10px 0;
+}
+
+.cards p {
+  margin: 5px 0;
+}
+
+.cards a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: 3px 4px 3px rgb(0, 0, 0);
+}
+
+.text {
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.a {
+  font-family: Impact, "Arial Narrow Bold", sans-serif;
+  font-size: x-large;
+  margin-left: 40px;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+
+
+  .cards h3 {
+    font-size: 1rem;
+  }
+
+  .cards p {
+    font-size: 0.8rem;
+  }
+
+  .cards img {
+    width: 150px;
+    height: 180px;
+  }
+
+}
+

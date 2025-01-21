@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library History</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        /* Additional styles for navbar */
+        nav .container-fluid  #navbarSupportedContent #navlinks {
+            font-size: x-large; 
+            margin-right: 10px;
+        }
+        nav .container-fluid  #navbarSupportedContent .dropdown-menu .dropdown-item {
+            font-size: x-large; 
+            margin-right: 10px;
+        }
+        
+        /* Reset some default margins and paddings */
+        body, h1, h2, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+            line-height: 1.6;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><polygon points="50,0 100,50 50,100 0,50" fill="%238B0000" opacity="0.3"/><polygon points="150,100 200,150 150,200 100,150" fill="%23D2691E" opacity="0.3"/><polygon points="0,150 50,100 100,150 50,200" fill="%238B0000" opacity="0.3"/><polygon points="200,0 150,50 100,0 150,-50" fill="%23D2691E" opacity="0.3"/><polygon points="100,50 150,100 100,150 50,100" fill="%238B0000" opacity="0.3"/><polygon points="25,25 75,75 25,125 -25,75" fill="%23D2691E" opacity="0.3"/><polygon points="175,175 225,225 175,275 125,225" fill="%238B0000" opacity="0.3"/></svg>');
+            background-repeat: no-repeat;
+          
+        }
+main{
+  background-position: center;
+            background-size: contain;
+
+}
+        /* Content Section Styles */
+        .content {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        .content h2 {
+            font-size: 2em;
+            color: #4a90e2;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .content p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .books-section {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .book {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .book img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .book h3 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .book p {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .book a {
+            display: inline-block;
+            text-decoration: none;
+            background-color: #4a90e2;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 0.9em;
+        }
+
+        .book a:hover {
+            background-color: #357ab8;
+        }
+
+        @media (max-width: 768px) {
+            .books-section {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .books-section {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- New Navigation Bar -->
+<nav class="navbar navbar-expand-xxl bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../index.html"><img src="../icon/icon.ico" alt="" width="60px" height="60px" style="margin-right: 200px;"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" id="navlinks" aria-current="page" href="../index.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link active dropdown-toggle" id="navlinks" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Categories
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="../Mohamed Nabil/Islamicbooks.html">Islamic books</a></li>
+              <li><a class="dropdown-item" href="../Hosni Abdel Aati/softwarebooks.html">Software books</a></li>
+              <li><a class="dropdown-item" href="../Omar Ibrahim/NetworkSecuritybooks.html">Network Security books</a></li>
+              <li><a class="dropdown-item" href="Historybooks.html">History books</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../ahmed gmal/plans.html" id="navlinks">Membership</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../Fatima/aboutus.html" id="navlinks">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../ziad mohamed/contact.html" id="navlinks">Contact us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../hassan/login.html" id="navlinks">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../Mohammed Mahdi/register.html"
+              id="navlinks">Register</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search" style="margin-bottom: 10px;">
+          <input class="form-control me-2 border-dark" type="search" placeholder="Search" aria-label="Search" />
+          <button class="btn btn-outline-light border-dark bg-success" type="submit">
+            Search
+          </button>
+        </form>
+      </div>
+    </div>
+  </nav>
+    <main class="content">
+        <h2>Historical Books</h2>
+        <div class="books-section">
+            <div class="book">
+                <img src="https://www.noor-book.com/publice/covers_cache_webp/9/e/b/d/56d83b9aebebdc2d6ea25e97f7b6f521.png.webp" alt="The beginning and the end">
+                <h3>The beginning and the end</h3>
+                <p>Ibn Kathir</p>
+                <a href="1begin&end.html">View More</a>
+            </div>
+            <div class="book">
+                <img src="https://www.noor-book.com/publice/covers_cache_webp/1/d/2/c/415a4983bfd2c3643befaea4c3364463.jpg.webp" alt="Maghazi Al-Zuhri">
+                <h3>Maghazi Al-Zuhri</h3>
+                <p>Ibn Shihab az-Zuhri</p>
+                <a href="2 magazi.html">View More</a>
+            </div>
+            <div class="book">
+                <img src="https://www.neelwafurat.com/images/lb/abookstore/covers/hard/178/178977.jpg" alt="As-Sirah an-Nabawyah li Ibn Hisham">
+                <h3>As-Sirah an-Nabawyah li Ibn Hisham</h3>
+                <p>Ibn Hisham</p>
+                <a href="3 Al serah.html">View More</a>
+            </div>
+            <div class="book">
+                <img src="https://www.neelwafurat.com/images/eg/abookstore/covers/hard/248/248031.jpg" alt="Biographies Of The Flags Of The Nobles">
+                <h3>Biographies Of The Flags Of The Nobles</h3>
+                <p>Shams Aldin Aldhahabi</p>
+                <a href="4 bios.html">View More</a>
+            </div>
+            <div class="book">
+                <img src="https://mktbtypdf.com/wp-content/uploads/2022/04/%D8%A7%D9%84%D9%83%D8%A7%D9%85%D9%84-%D9%81%D9%8A-%D8%A7%D9%84%D8%AA%D8%A7%D8%B1%D9%8A%D8%AE-%D8%A7%D8%A8%D9%86-%D8%A7%D9%84%D8%A3%D8%AB%D9%8A%D8%B1-pdf.jpg" alt="Alkamil Fi Tarikh">
+                <h3>Alkamil Fi Tarikh</h3>
+                <p>Ibn al-Athir</p>
+                <a href="5alkamil.html">View More</a>
+            </div>
+            <div class="book">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgFqBs9SbAAAY-ADafm_1NH1lJFF3UJu6ND5M9eIEpalqeElnVSi7l5isxSg5BYytGF4SDN0rjMcgVivnfKNLxfGqT_lWDWlSrw1TTOKPZ1E0E9IP2q2XBkpSLtVtqmv_xpN-J92ukNsjY/s1600/PRO4fbfbe2757ae0.jpg" alt="Sahih al-Bukhari">
+                <h3>Sahih al-Bukhari</h3>
+                <p>      </p>
+                <a href="6sahihbukhary.html">View More</a>
+            </div>
+            <div class="book">
+                <img src="https://ketabpedia.com/wp-content/uploads/2019/10/bnw2143.jpg" alt="At-Tarikh al-Kabir">
+                <h3>At-Tarikh al-Kabir</h3>
+                <p>Imam Bukhari</p>
+                <a href="7atarikhkabir.html">View More</a>
+            </div>
+            <div class="book">
+                <img src="https://www.noor-book.com/publice/covers_cache_webp/17/d/e/d/0f4ccb60fdded43024eac0d6514a7745.jpg.webp" alt="One Thousand and One Nights">
+                <h3>One Thousand and One Nights</h3>
+                <p>Anonymous Author</p>
+                <a href="8onethousandnights.html">View More</a>
+            </div>
+        </div>
+    
+    </main>
+
+
+
+<footer class="bg-dark text-white text-center text-lg-start">
+    <div class="container p-4">
+      <div class="row">
+        <!-- عمود اللوجو والنص -->
+        <div class="col-lg-6 col-md-12 mb-4 mb-md-0 text-start">
+          <h5 class="text-uppercase">
+            <img src="../icon/icon.ico" alt="Library Logo" width="90" class="me-2">
+            BATU Library
+          </h5>
+          <p>
+          <blockquote>
+            "Libraries store the energy that fuels the imagination. They open up windows to the world and inspire us to
+            explore, achieve, and contribute to improving our quality of life."
+            <br>— Sidney Sheldon
+          </blockquote>
+          </p>
+        </div>
+  
+        <!-- عمود الروابط -->
+        <div class="col-lg-6 col-md-12">
+          <div class="row">
+            <!-- العمود الأول -->
+            <div class="col-lg-4 col-md-6 mb-4">
+              <h5 class="text-uppercase">Links</h5>
+              <ul class="list-unstyled">
+                <li class="mb-2">
+                  <a href="../index.html" class="text-white text-decoration-none">Home</a>
+                </li>
+                <li class="mb-2">
+                  <a href="../Mohamed Mahdi/register.html" class="text-white text-decoration-none">register</a>
+                </li>
+                <li class="mb-2">
+                  <a href="../hassan/login.html" class="text-white text-decoration-none">Login</a>
+                </li>
+                <li class="mb-2">
+                  <a href="../Fatima/aboutus.html" class="text-white text-decoration-none">About us</a>
+                </li>
+                <li class="mb-2">
+                  <a href="../ziad mohamed/contact.html" class="text-white text-decoration-none">Contact us</a>
+                </li>
+              </ul>
+            </div>
+  
+            <!-- العمود الثاني -->
+            <div class="col-lg-4 col-md-6 mb-4">
+              <h5 class="text-uppercase">More Links</h5>
+              <ul class="list-unstyled">
+                <li class="mb-2">
+                  <a href="../Doha/forgotpassword.html" class="text-white text-decoration-none">Forgot password</a>
+                </li>
+                <li class="mb-2">
+                  <a href="../Ahmed Abdel Rahim/faq.html" class="text-white text-decoration-none">FAQ</a>
+                </li>
+                <li class="mb-2">
+                  <a href="../Mahmoud Ahmed Mahmoud/privacypolicy.html" class="text-white text-decoration-none">privacy
+                    policy</a>
+                </li>
+              </ul>
+            </div>
+  
+  
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  
+    <div class="  text-center p-3 ">
+      © 2024 Copyright:
+      <a class="text-white text-decoration-none" href="../index.html"> BATU Library.com</a>
+    </div>
+  </footer>
+    
+</body>
+</html>
