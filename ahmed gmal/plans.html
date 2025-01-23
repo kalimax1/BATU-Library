@@ -15,83 +15,81 @@
 
 
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap");
-/* استيراد خط من جوجل، تحديد خط "Source Sans Pro" لاستخدامه في النصوص */
 
-/* إعادة تعيين القيم الافتراضية لجميع العناصر */
+
+
 * {
   margin: 0;
-  /* إعادة تعيين الهوامش إلى 0 */
+
   padding: 0;
-  /* إعادة تعيين الحشو إلى 0 */
+
   box-sizing: border-box;
-  /* ضبط طريقة حساب الحجم لتشمل الحدود والحشو داخل العنصر */
+
   font-family: "Source Sans Pro", sans-serif;
-  /* تعيين خط النص إلى "Source Sans Pro" */
+
 }
 
 body {
   background-color: #f3f8de;
-  /* تعيين خلفية تدرج لوني من اللون الأزرق الداكن إلى الأبيض */
+
   min-height: 100vh;
-  /* جعل ارتفاع الصفحة يغطي كامل الشاشة */
+    
   display: flex;
-  /* استخدام flexbox لتنظيم المحتوى */
+    
   flex-direction: column;
-  /* ترتيب العناصر عموديًا */
+    
   justify-content: center;
-  /* محاذاة المحتوى في المنتصف */
-  text-align: center;
-  /* محاذاة النصوص في المنتصف */
+ 
   padding-bottom: auto;
-  /* إضافة مساحة إضافية في أسفل الصفحة */
+
 }
 
 h1 {
   margin-top: 2rem;
-  /* إضافة هامش أعلى العنوان */
+
   font-size: 2.0rem;
-  /* تعيين حجم الخط للعناوين */
+
   text-align: center;
 }
 
 p {
   margin-bottom: 4rem;
-  /* إضافة هامش أسفل الفقرة */
+
   font-size: 1.2rem;
-  /* تعيين حجم الخط للفقرات */
+
   text-align: center;
 }
 
 .pricing {
   display: flex;
-  /* استخدام flexbox لعرض العناصر بشكل أفقي */
+
   flex-wrap: wrap;
-  /* السماح للعناصر بالتنقل إلى سطر جديد عند الضرورة */
+
   justify-content: center;
-  /* محاذاة العناصر في منتصف الحاوية */
+
   gap: 15px;
-  /* إضافة المسافة بين العناصر */
+
   padding-right: 25px;
-  /* إضافة مساحة للحشو من اليمين */
+
 }
 
 .plan {
   background-color: #fffeef;
-  /* تعيين خلفية بيضاء للخطة */
+
   padding: 2.5rem;
-  /* إضافة حشو داخلي */
+
   margin: 40px;
-  /* إضافة هامش بين العناصر */
+
   border-radius: 5px;
-  /* إضافة زوايا دائرية للحواف */
+
   text-align: center;
-  /* محاذاة النص داخل الخطة */
+
   transition: 0.2s;
-  /* إضافة تأثيرات انتقالية للخصائص */
+
   cursor: pointer;
-  /* تغيير المؤشر عند التمرير فوق الخطة */
+    
   width: 300px;
-  /* تعيين عرض الخطة ليكون ثابتًا */
+
   border: 1px solid #000;
 
 
@@ -99,154 +97,152 @@ p {
 
 .plan h2 {
   font-size: 22px;
-  /* تعيين حجم الخط لعنوان الخطة */
+
   margin-bottom: 9px;
-  /* إضافة هامش أسفل العنوان */
+
 }
 
 .plan .price {
   margin-bottom: 0.5rem;
-  /* إضافة هامش أسفل السعر */
+
   font-size: 30px;
-  /* تعيين حجم الخط للسعر */
+
 }
 
 .plan ul.features {
   list-style-type: none;
-  /* إزالة النقاط من قائمة المزايا */
+
   text-align: left;
-  /* محاذاة النص داخل القائمة لليسار */
+
   padding: 0;
-  /* إزالة الحشو داخل القائمة */
+
 }
 
 .plan ul.features li {
   margin: 4px;
-  /* إضافة مسافة بين العناصر في القائمة */
+
 }
 
 .plan ul.features .fas {
   margin-right: 4px;
-  /* إضافة مسافة بين الأيقونة والنص */
+
 }
 
 .plan ul.features .fa-check-circle {
   color: #433d97;
-  /* تعيين لون أيقونة "صح" إلى اللون البنفسجي */
+
 }
 
 .plan ul.features .fa-times-circle {
   color: #eb4d4b;
-  /* تعيين لون أيقونة "خطأ" إلى اللون الأحمر */
+
 }
 
 .plan button {
   border: none;
-  /* إزالة الحد من الزر */
+
   width: 100%;
-  /* جعل الزر يأخذ كامل عرض الخطة */
+
   padding: 12px 35px;
-  /* تعيين الحشو داخل الزر */
+ 
   margin-top: 1rem;
-  /* إضافة هامش أعلى الزر */
+
   background-color: #302781;
-  /* تعيين خلفية الزر إلى اللون البنفسجي */
+
   color: #fff;
-  /* تعيين لون النص داخل الزر إلى الأبيض */
+ 
   border-radius: 5px;
-  /* إضافة زوايا دائرية للزر */
+
   cursor: pointer;
-  /* تغيير المؤشر عند التمرير فوق الزر */
+
   font-size: 16px;
-  /* تعيين حجم الخط داخل الزر */
+
 }
 
 .plan.popular {
   border: 4px solid #302781;
-  /* إضافة حدود باللون البنفسجي حول الخطة الشعبية */
+
   position: relative;
  
-  /* تحديد موضع نسبي لتحديد موقع النص العلوي */
+
 
 }
 
 .plan.popular span {
   position: absolute;
-  /* تحديد النص العلوي بشكل مطلق بالنسبة للخطة */
+
   top: -20px;
-  /* تعيين المسافة بين النص العلوي وأعلى الخطة */
+
   left: 50%;
-  /* محاذاة النص العلوي بشكل مركزي أفقيًا */
+
   transform: translateX(-50%);
-  /* تحريك النص العلوي لتصحيحه تمامًا في المركز */
+
   background-color: #302781;
-  /* تعيين خلفية للنص العلوي */
+
   color: #fff9d7;
-  /* تعيين لون النص داخل النص العلوي إلى الأبيض */
+
   padding: 4px 20px;
-  /* إضافة حشو داخل النص العلوي */
+
   font-size: 18px;
-  /* تعيين حجم الخط للنص العلوي */
+
   border-radius: 5px;
-  /* إضافة زوايا دائرية للنص العلوي */
+
 }
 
 .plan:hover {
   box-shadow: 10px 10px 80px -28px rgba(0, 0, 0, 0.50);
-  /* إضافة تأثير الظل عند التمرير فوق الخطة */
+
 }
 
-/* Media Queries */
 
-/* For tablets and small devices (الشاشات الأصغر من 768px) */
 @media (max-width: 768px) {
   h1 {
     font-size: 2rem;
-    /* تعديل حجم الخط للعناوين في الشاشات الصغيرة */
+
   }
 
   p {
     font-size: 1rem;
-    /* تعديل حجم الخط للفقرات في الشاشات الصغيرة */
+
   }
 
   .pricing {
     flex-direction: column;
-    /* جعل الخُطط تتراص عموديًا في الشاشات الصغيرة */
+
     align-items: center;
-    /* محاذاة العناصر في المنتصف */
+
   }
 
   .plan {
     width: 80%;
-    /* تعديل عرض الخطة ليكون أكثر ملائمة للشاشات الصغيرة */
+
   }
 }
 
-/* For mobile phones (الشاشات الأصغر من 480px) */
+
 @media (max-width: 480px) {
   h1 {
     font-size: 1.8rem;
-    /* تعديل حجم الخط للعناوين في الهواتف */
+
   }
 
   p {
     font-size: 0.9rem;
-    /* تعديل حجم الخط للفقرات في الهواتف */
+
   }
 
   .plan {
     width: 100%;
-    /* جعل الخُطط تأخذ عرض الشاشة بالكامل في الهواتف */
+
     padding: 1.5rem;
-    /* تعديل الحشو داخل الخطة في الهواتف */
+
   }
 
   .plan button {
     font-size: 14px;
-    /* تعديل حجم الخط داخل الزر في الهواتف */
+
     padding: 10px;
-    /* تعديل الحشو داخل الزر في الهواتف */
+
   }
 }
 
